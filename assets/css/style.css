@@ -5,13 +5,13 @@ body {
     line-height: 1.6;
 }
 
-header {
+.site-header {
     background-color: #003366;
     color: #fff;
 }
 
-header .container {
-    max-width: 1000px;
+.site-header .container {
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -19,12 +19,14 @@ header .container {
     padding: 15px;
 }
 
-.logo {
+.site-header .logo a {
     font-size: 1.5em;
-    margin: 0;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
 }
 
-.menu {
+.main-nav .menu {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -32,22 +34,110 @@ header .container {
     gap: 20px;
 }
 
-.menu a {
+.main-nav a {
     color: #fff;
     text-decoration: none;
 }
 
-#hero {
-    background: linear-gradient(to right, #00529B, #0095D9);
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.nav-toggle .bar {
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #003366;
+    }
+    .main-nav.open {
+        display: block;
+    }
+    .main-nav .menu {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .nav-toggle {
+        display: flex;
+    }
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .slides {
+    position: relative;
+}
+
+.hero .slide {
+    display: none;
+}
+
+.hero .slide.active {
+    display: block;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero .caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.5);
     color: #fff;
-    text-align: center;
-    padding: 80px 20px;
+    padding: 10px 20px;
+}
+
+.hero .control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hero .prev {
+    left: 10px;
+}
+
+.hero .next {
+    right: 10px;
 }
 
 .container-section {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
+}
+
+.service-list {
+    list-style: disc;
+    margin-left: 20px;
 }
 
 footer {

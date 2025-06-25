@@ -2,17 +2,44 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HRI 메인 페이지</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <header>
-        <h1>현대경제연구원 (HRI)</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">소개</a></li>
+<header class="site-header">
+        <h1 class="logo"><a href="index.html">HRI</a></h1>
+        <nav class="main-nav" id="mainNav">
+        <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+<section id="hero" class="hero">
+    <div class="slides">
+        <div class="slide active">
+            <img src="https://placehold.co/1200x500?text=Slide+1" alt="배너 이미지 1">
+            <div class="caption">
+                <h2>Powered by Knowledge</h2>
+                <p>사람을 움직이고 세상을 변화시킵니다.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://placehold.co/1200x500?text=Slide+2" alt="배너 이미지 2">
+            <div class="caption">
+                <h2>현대경제연구원</h2>
+                <p>미래를 선도하는 종합 연구기관</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://placehold.co/1200x500?text=Slide+3" alt="배너 이미지 3">
+            <div class="caption">
+                <h2>Global Insight</h2>
+                <p>세계 시장을 바라보는 깊이 있는 시각</p>
+            </div>
+        </div>
+    <button class="control prev" id="prevBtn" aria-label="이전 슬라이드">&#10094;</button>
+    <button class="control next" id="nextBtn" aria-label="다음 슬라이드">&#10095;</button>
+<main>
+    <p>현대경제연구원은 국내외 경제와 산업을 연구하며 전략적 인사이트를 제공하는 종합 연구기관입니다.</p>
+    <ul class="service-list">
+    <p>최신 보고서는 로그인 후 다운로드 하실 수 있습니다.</p>
+</main>
                 <li><a href="#research">연구</a></li>
                 <li><a href="#contact">문의</a></li>
             </ul>
