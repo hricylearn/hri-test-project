@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - HRI</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1 class="logo">HRI</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="index.html#about">회사소개</a></li>
+                <li><a href="index.html#services">사업분야</a></li>
+                <li><a href="index.html#research">연구자료</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="login" class="container-section">
+    <h2>회원 로그인</h2>
+    <form id="loginForm">
+        <label for="username">아이디</label>
+        <input type="text" id="username" required>
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" required>
+        <button type="submit">로그인</button>
+    </form>
+    <p class="note">※ 본 예제는 실제 인증 기능이 없습니다.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Hyundai Research Institute</p>
+</footer>
+<script src="assets/js/login.js"></script>
+</body>
+</html>
