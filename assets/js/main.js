@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.getElementById('navToggle');
     const nav = document.getElementById('mainNav');
     let current = 0;
+    let timer = null;
 
     function showSlide(index) {
         slides[current].classList.remove('active');
@@ -12,12 +13,26 @@ document.addEventListener('DOMContentLoaded', function () {
         slides[current].classList.add('active');
     }
 
-    prevBtn.addEventListener('click', () => showSlide(current - 1));
-    nextBtn.addEventListener('click', () => showSlide(current + 1));
-
-    setInterval(() => {
+    prevBtn.addEventListener('click', () => {
+        showSlide(current - 1);
+        restart();
+    });
+    nextBtn.addEventListener('click', () => {
         showSlide(current + 1);
-    }, 5000);
+        restart();
+    });
+
+    function start() {
+        timer = setInterval(() => {
+            showSlide(current + 1);
+        }, 5000);
+    }
+
+    function restart() {
+        clearInterval(timer);
+        start();
+    }
+    start();
 
     navToggle.addEventListener('click', () => {
         nav.classList.toggle('open');
